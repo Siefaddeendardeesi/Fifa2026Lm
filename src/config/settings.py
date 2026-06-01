@@ -145,6 +145,9 @@ class Settings(BaseSettings):
 
     @property
     def rankings_snapshot_csv(self) -> Path:
+        bundled = self.project_root / "app" / "resources" / "team_rankings_snapshot.csv"
+        if bundled.exists():
+            return bundled
         return self.reference_dir / "team_rankings_snapshot.csv"
 
     @property

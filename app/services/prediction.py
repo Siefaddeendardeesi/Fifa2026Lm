@@ -23,7 +23,7 @@ from src.models.registry import ModelRegistry
 from src.rankings.engine import RankingEngine, RankingMethod
 from src.rankings.predictor import extract_team_snapshot, predict_match_proba
 from src.simulation.engine import SimulationEngine, all_wc2026_teams, load_wc2026_groups
-from src.utils.exceptions import NotFoundError, RankingError
+from src.utils.exceptions import NotFoundError
 from src.utils.logging import get_logger
 
 logger = get_logger(__name__)
@@ -172,8 +172,8 @@ class RankingsService:
             method_enum = RankingMethod(method)
             df = self.engine.compute(method=method_enum, since=since, pool_size=pool_size)
             return self._dataframe_to_response(df, method, pool_size)
-        except (FileNotFoundError, OSError, ValueError, RankingError) as exc:
-            logger.warning("rankings_compute_failed", error=str(exc))
+        except Exception as exc:
+            logger.warning("rankings_compute_failed", error=str(exc), error_type=type(exc).__name__)
             return self._get_rankings_from_snapshot(method, pool_size)
 
 

@@ -78,6 +78,9 @@ fifa-api = "app.api.main:run_server"
 where = ["."]
 include = ["src*", "app*", "scripts*", "monitoring*"]
 
+[tool.setuptools.package-data]
+app = ["resources/*.csv"]
+
 [tool.black]
 line-length = 100
 target-version = ["py312"]
