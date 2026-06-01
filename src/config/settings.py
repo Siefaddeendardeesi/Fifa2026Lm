@@ -144,6 +144,10 @@ class Settings(BaseSettings):
         return self.reference_dir / "wc2026_groups.json"
 
     @property
+    def rankings_snapshot_csv(self) -> Path:
+        return self.reference_dir / "team_rankings_snapshot.csv"
+
+    @property
     def features_parquet(self) -> Path:
         return self.processed_dir / "features.parquet"
 

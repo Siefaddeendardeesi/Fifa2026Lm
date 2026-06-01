@@ -23,7 +23,7 @@ from src.models.registry import ModelRegistry
 from src.rankings.engine import RankingEngine, RankingMethod
 from src.rankings.predictor import extract_team_snapshot, predict_match_proba
 from src.simulation.engine import SimulationEngine, all_wc2026_teams, load_wc2026_groups
-from src.utils.exceptions import NotFoundError
+from src.utils.exceptions import NotFoundError, RankingError
 from src.utils.logging import get_logger
 
 logger = get_logger(__name__)
@@ -104,14 +104,13 @@ class RankingsService:
     def __init__(self) -> None:
         self.engine = RankingEngine()
 
-    def get_rankings(
-        self,
-        method: str = "model",
-        since: str = "2024-01-01",
-        pool_size: int = 48,
-    ) -> RankingsResponse:
-        method_enum = RankingMethod(method)
-        df = self.engine.compute(method=method_enum, since=since, pool_size=pool_size)
+    @staticmethod
+    def _rankings_runtime_ready() -> bool:
+        settings = get_settings()
+        return settings.features_parquet.exists() and settings.model_path.exists()
+
+    @staticmethod
+    def _dataframe_to_response(df: pd.DataFrame, method: str, pool_size: int) -> RankingsResponse:
         entries: list[RankingEntry] = []
         for _, row in df.iterrows():
             score = row.get("hybrid_score") or row.get("avg_win_prob") or row.get("elo_score")
@@ -134,6 +133,48 @@ class RankingsService:
                 )
             )
         return RankingsResponse(method=method, pool_size=pool_size, rankings=entries)
+
+    def _get_rankings_from_snapshot(self, method: str, pool_size: int) -> RankingsResponse:
+        settings = get_settings()
+        path = settings.rankings_snapshot_csv
+        if not path.exists():
+            raise NotFoundError(
+                "Rankings snapshot not found. Deploy data/reference/team_rankings_snapshot.csv "
+                "or run the training pipeline locally."
+            )
+        df = pd.read_csv(path)
+        if method == RankingMethod.ELO.value:
+            df = df.sort_values("elo", ascending=False).reset_index(drop=True)
+            df["rank"] = df.index + 1
+            df["elo_score"] = df["elo"]
+        elif method == RankingMethod.HYBRID.value:
+            elo_norm = df["elo"] / df["elo"].max()
+            model_norm = df["avg_win_prob"] / df["avg_win_prob"].max()
+            df = df.copy()
+            df["hybrid_score"] = 0.4 * elo_norm + 0.6 * model_norm
+            df = df.sort_values("hybrid_score", ascending=False).reset_index(drop=True)
+            df["rank"] = df.index + 1
+        df = df.head(pool_size)
+        logger.info("rankings_snapshot_served", method=method, pool_size=pool_size)
+        return self._dataframe_to_response(df, method, pool_size)
+
+    def get_rankings(
+        self,
+        method: str = "model",
+        since: str = "2024-01-01",
+        pool_size: int = 48,
+    ) -> RankingsResponse:
+        if not self._rankings_runtime_ready():
+            logger.warning("rankings_using_snapshot", reason="features_or_model_missing")
+            return self._get_rankings_from_snapshot(method, pool_size)
+
+        try:
+            method_enum = RankingMethod(method)
+            df = self.engine.compute(method=method_enum, since=since, pool_size=pool_size)
+            return self._dataframe_to_response(df, method, pool_size)
+        except (FileNotFoundError, OSError, ValueError, RankingError) as exc:
+            logger.warning("rankings_compute_failed", error=str(exc))
+            return self._get_rankings_from_snapshot(method, pool_size)
 
 
 class TeamsService:

@@ -53,6 +53,7 @@ def test_teams_service(project_root) -> None:
 
 def test_rankings_service(features_df, trained_pipeline, mocker, test_settings) -> None:
     svc = RankingsService()
+    mocker.patch.object(RankingsService, "_rankings_runtime_ready", return_value=True)
     mocker.patch.object(
         svc.engine,
         "compute",
@@ -62,6 +63,14 @@ def test_rankings_service(features_df, trained_pipeline, mocker, test_settings) 
     )
     resp = svc.get_rankings(method="model", pool_size=1)
     assert resp.rankings[0].team == "Brazil"
+
+
+def test_rankings_service_snapshot_fallback(mocker, test_settings) -> None:
+    svc = RankingsService()
+    mocker.patch.object(RankingsService, "_rankings_runtime_ready", return_value=False)
+    resp = svc.get_rankings(method="model", pool_size=3)
+    assert len(resp.rankings) == 3
+    assert resp.rankings[0].team == "Argentina"
 
 
 def test_simulation_service(mocker, test_settings, tmp_path) -> None:
