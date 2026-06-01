@@ -12,3 +12,13 @@ python-dotenv
 joblib
 tqdm
 streamlit>=1.28
+
+# API runtime (Railway / uvicorn)
+fastapi>=0.109
+uvicorn[standard]>=0.27
+slowapi>=0.1.9
+pydantic>=2.5
+pydantic-settings>=2.1
+structlog>=24.1
+prometheus-client>=0.19
+httpx>=0.26
