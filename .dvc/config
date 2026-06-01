@@ -1,0 +1,15 @@
+# DVC configuration for data versioning
+[core]
+    remote = localstorage
+
+['remote "localstorage"']
+    url = ./dvc-storage
+
+['remote "s3"']
+    url = s3://fifa2026lm-data/dvc
+
+['remote "azure"']
+    url = azure://fifa2026lm/dvc
+
+['remote "gcs"']
+    url = gs://fifa2026lm-data/dvc

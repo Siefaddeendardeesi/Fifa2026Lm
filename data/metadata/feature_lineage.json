@@ -1,0 +1,52 @@
+{
+  "feature_version": "1.0.0",
+  "timestamp": "2026-05-31T11:16:07.197338+00:00",
+  "row_count": 12,
+  "transformers": [
+    {
+      "name": "form_features",
+      "version": "1.0.0"
+    },
+    {
+      "name": "elo_features",
+      "version": "1.0.0"
+    }
+  ],
+  "output_columns": [
+    "date",
+    "home_team",
+    "away_team",
+    "home_elo",
+    "away_elo",
+    "elo_diff",
+    "home_fifa_rank",
+    "away_fifa_rank",
+    "fifa_rank_diff",
+    "home_confederation",
+    "away_confederation",
+    "home_form_wins_10",
+    "home_form_draws_10",
+    "home_form_losses_10",
+    "home_form_goals_for_10",
+    "home_form_goals_against_10",
+    "home_form_clean_sheets_10",
+    "away_form_wins_10",
+    "away_form_draws_10",
+    "away_form_losses_10",
+    "away_form_goals_for_10",
+    "away_form_goals_against_10",
+    "away_form_clean_sheets_10",
+    "home_form_points_10",
+    "away_form_points_10",
+    "home_form_goal_diff_10",
+    "away_form_goal_diff_10",
+    "home_form_win_rate_10",
+    "away_form_win_rate_10",
+    "home_squad_value",
+    "away_squad_value",
+    "home_wc_titles",
+    "away_wc_titles",
+    "neutral",
+    "result"
+  ]
+}

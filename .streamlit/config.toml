@@ -1,0 +1,14 @@
+# Material Design 3 theme tokens — https://m3.material.io/get-started
+[theme]
+base = "light"
+primaryColor = "#6750A4"
+backgroundColor = "#FEF7FF"
+secondaryBackgroundColor = "#F3EDF7"
+textColor = "#1D1B20"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

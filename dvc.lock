@@ -1,0 +1,74 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python scripts/download_data.py --skip-kaggle
+    deps:
+    - path: scripts/download_data.py
+      hash: md5
+      md5: f687129d817e23d5494aaeb761776fb2
+      size: 925
+    - path: src/etl/download.py
+      hash: md5
+      md5: ca5c02cf8318534ecd66216f805c1f3c
+      size: 5801
+    outs:
+    - path: data/raw/elo.csv
+      hash: md5
+      md5: 76a968aec79a985d580da34e404e965a
+      size: 30376
+    - path: data/raw/results.csv
+      hash: md5
+      md5: e2250bf886b836bb127a23b56dc83c4a
+      size: 3717862
+  features:
+    cmd: python scripts/build_features.py
+    deps:
+    - path: data/raw/results.csv
+      hash: md5
+      md5: e2250bf886b836bb127a23b56dc83c4a
+      size: 3717862
+    - path: src/etl/build_dataset.py
+      hash: md5
+      md5: fed665b09c7b7a71a1bfeac06bfe180d
+      size: 3095
+    - path: src/features/store.py
+      hash: md5
+      md5: 959262d03529790a0e31c1f9f5459f54
+      size: 6732
+    outs:
+    - path: data/processed/features.parquet
+      hash: md5
+      md5: 89aeedfc4856a8ab1de310b313401b2f
+      size: 1624532
+    - path: data/processed/test.parquet
+      hash: md5
+      md5: 45e20c46585debdb8ed977a4186beded
+      size: 244460
+    - path: data/processed/train.parquet
+      hash: md5
+      md5: 89e89b38bc61f4aa0b860782501eff06
+      size: 1403686
+  train:
+    cmd: python scripts/train_baseline.py
+    deps:
+    - path: data/processed/test.parquet
+      hash: md5
+      md5: 45e20c46585debdb8ed977a4186beded
+      size: 244460
+    - path: data/processed/train.parquet
+      hash: md5
+      md5: 89e89b38bc61f4aa0b860782501eff06
+      size: 1403686
+    - path: src/models/trainer.py
+      hash: md5
+      md5: a01db36d4ca1c72d712a340362445ec9
+      size: 3929
+    outs:
+    - path: data/processed/baseline_model.joblib
+      hash: md5
+      md5: b4580bba7990f3dbfc298577710b26ca
+      size: 2134119
+    - path: data/processed/reports/evaluation_report.html
+      hash: md5
+      md5: 8b4b163ee650b317dc8d8f0f9360e172
+      size: 193800

@@ -1,0 +1,30 @@
+stages:
+  download:
+    cmd: python scripts/download_data.py --skip-kaggle
+    deps:
+      - scripts/download_data.py
+      - src/etl/download.py
+    outs:
+      - data/raw/results.csv
+      - data/raw/elo.csv
+
+  features:
+    cmd: python scripts/build_features.py
+    deps:
+      - data/raw/results.csv
+      - src/etl/build_dataset.py
+      - src/features/store.py
+    outs:
+      - data/processed/features.parquet
+      - data/processed/train.parquet
+      - data/processed/test.parquet
+
+  train:
+    cmd: python scripts/train_baseline.py
+    deps:
+      - data/processed/train.parquet
+      - data/processed/test.parquet
+      - src/models/trainer.py
+    outs:
+      - data/processed/baseline_model.joblib
+      - data/processed/reports/evaluation_report.html

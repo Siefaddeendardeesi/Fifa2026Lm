@@ -1,0 +1,7 @@
+outs:
+- path: data/raw
+  persist: true
+- path: data/processed/features.parquet
+- path: data/processed/train.parquet
+- path: data/processed/test.parquet
+- path: data/processed/baseline_model.joblib

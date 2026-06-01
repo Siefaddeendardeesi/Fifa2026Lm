@@ -1,0 +1,27 @@
+{
+  "dashboard": {
+    "title": "FIFA2026LM API",
+    "panels": [
+      {
+        "title": "Prediction Latency",
+        "type": "graph",
+        "targets": [{"expr": "histogram_quantile(0.95, rate(fifa_prediction_latency_seconds_bucket[5m]))"}]
+      },
+      {
+        "title": "API Errors",
+        "type": "graph",
+        "targets": [{"expr": "rate(fifa_api_errors_total[5m])"}]
+      },
+      {
+        "title": "Model Confidence",
+        "type": "gauge",
+        "targets": [{"expr": "fifa_model_confidence"}]
+      },
+      {
+        "title": "Simulation Duration",
+        "type": "graph",
+        "targets": [{"expr": "histogram_quantile(0.95, rate(fifa_simulation_duration_seconds_bucket[5m]))"}]
+      }
+    ]
+  }
+}

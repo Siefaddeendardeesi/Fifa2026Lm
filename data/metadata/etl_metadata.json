@@ -1,0 +1,769 @@
+{
+  "sources": {
+    "features": {
+      "name": "features",
+      "path": "C:\\Users\\.NET Trainee\\Desktop\\Fifa2026Lm\\data\\processed\\features.parquet",
+      "checksum_sha256": "9695b4379c4472a5d19e36419f210b2e1a20f7618d98a2e78c1c074bef211b93",
+      "size_bytes": 1624532,
+      "version": null,
+      "url": null,
+      "updated_at": "2026-05-31T11:16:08.385125+00:00"
+    }
+  },
+  "runs": [
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0004625003784894943,
+      "timestamp": "2026-05-31T08:59:35.589124+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.009342200122773647,
+      "timestamp": "2026-05-31T08:59:35.620703+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.0025670998729765415,
+      "timestamp": "2026-05-31T08:59:35.644525+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.009248699992895126,
+      "timestamp": "2026-05-31T08:59:35.677416+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.000989499967545271,
+      "timestamp": "2026-05-31T09:04:15.460974+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0006177001632750034,
+      "timestamp": "2026-05-31T09:04:15.487740+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.010771499946713448,
+      "timestamp": "2026-05-31T09:04:15.527046+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.002276299986988306,
+      "timestamp": "2026-05-31T09:04:15.554983+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.007446100004017353,
+      "timestamp": "2026-05-31T09:04:15.590590+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0005904999561607838,
+      "timestamp": "2026-05-31T09:11:39.248068+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0003720000386238098,
+      "timestamp": "2026-05-31T09:11:39.263918+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.006167999934405088,
+      "timestamp": "2026-05-31T09:11:39.287090+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.001690000295639038,
+      "timestamp": "2026-05-31T09:11:39.304143+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.005552399903535843,
+      "timestamp": "2026-05-31T09:11:39.326430+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0006217001937329769,
+      "timestamp": "2026-05-31T09:19:37.619730+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0004813000559806824,
+      "timestamp": "2026-05-31T09:19:37.637909+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.006306400056928396,
+      "timestamp": "2026-05-31T09:19:37.665666+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.0017591002397239208,
+      "timestamp": "2026-05-31T09:19:37.685603+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.006573299877345562,
+      "timestamp": "2026-05-31T09:19:37.711792+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0006382996216416359,
+      "timestamp": "2026-05-31T09:28:35.630022+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.00040559982880949974,
+      "timestamp": "2026-05-31T09:28:35.648720+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.0069945999421179295,
+      "timestamp": "2026-05-31T09:28:35.674929+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.0018592998385429382,
+      "timestamp": "2026-05-31T09:28:35.694946+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.007521199993789196,
+      "timestamp": "2026-05-31T09:28:35.721710+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0007354998961091042,
+      "timestamp": "2026-05-31T09:40:31.613681+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0007388000376522541,
+      "timestamp": "2026-05-31T09:40:31.645377+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.007595700211822987,
+      "timestamp": "2026-05-31T09:40:31.699735+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.003416200168430805,
+      "timestamp": "2026-05-31T09:40:31.753670+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.00961870001628995,
+      "timestamp": "2026-05-31T09:40:31.819213+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0031747999601066113,
+      "timestamp": "2026-05-31T09:46:05.736380+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0005997000262141228,
+      "timestamp": "2026-05-31T09:46:05.777459+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.013331199996173382,
+      "timestamp": "2026-05-31T09:46:05.838513+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.005393399856984615,
+      "timestamp": "2026-05-31T09:46:05.893387+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.017104099970310926,
+      "timestamp": "2026-05-31T09:46:05.984661+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0010295999236404896,
+      "timestamp": "2026-05-31T10:18:21.316390+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0005959998816251755,
+      "timestamp": "2026-05-31T10:18:21.347429+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.010219000279903412,
+      "timestamp": "2026-05-31T10:18:21.384103+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.003133899997919798,
+      "timestamp": "2026-05-31T10:18:21.408424+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.00876499991863966,
+      "timestamp": "2026-05-31T10:18:21.451091+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0007913000881671906,
+      "timestamp": "2026-05-31T10:23:48.197180+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0007967003621160984,
+      "timestamp": "2026-05-31T10:23:48.234243+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.011450099758803844,
+      "timestamp": "2026-05-31T10:23:48.288073+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.002178000286221504,
+      "timestamp": "2026-05-31T10:23:48.329357+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.0118066999129951,
+      "timestamp": "2026-05-31T10:23:48.376808+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0007636002264916897,
+      "timestamp": "2026-05-31T10:23:51.630617+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0006665000692009926,
+      "timestamp": "2026-05-31T10:23:51.662600+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.012211899738758802,
+      "timestamp": "2026-05-31T10:23:51.709097+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.0030672000721096992,
+      "timestamp": "2026-05-31T10:23:51.748532+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.013002200052142143,
+      "timestamp": "2026-05-31T10:23:51.798261+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0015545999631285667,
+      "timestamp": "2026-05-31T10:26:21.670819+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.00046110013499855995,
+      "timestamp": "2026-05-31T10:26:21.696539+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.012135600205510855,
+      "timestamp": "2026-05-31T10:26:21.739805+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.0031355000101029873,
+      "timestamp": "2026-05-31T10:26:21.768165+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.010128499940037727,
+      "timestamp": "2026-05-31T10:26:21.805793+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0007472001016139984,
+      "timestamp": "2026-05-31T10:28:53.426406+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0005673998966813087,
+      "timestamp": "2026-05-31T10:28:53.458114+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.010858399793505669,
+      "timestamp": "2026-05-31T10:28:53.505765+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.002088600303977728,
+      "timestamp": "2026-05-31T10:28:53.536094+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.008430900052189827,
+      "timestamp": "2026-05-31T10:28:53.581225+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0006627002730965614,
+      "timestamp": "2026-05-31T10:52:17.019048+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0003924998454749584,
+      "timestamp": "2026-05-31T10:52:17.043875+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.008431699592620134,
+      "timestamp": "2026-05-31T10:52:17.073460+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.0021553998813033104,
+      "timestamp": "2026-05-31T10:52:17.098872+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.009173600003123283,
+      "timestamp": "2026-05-31T10:52:17.134364+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.000597700010985136,
+      "timestamp": "2026-05-31T11:11:17.627971+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.0003454000689089298,
+      "timestamp": "2026-05-31T11:11:17.644574+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.007162200286984444,
+      "timestamp": "2026-05-31T11:11:17.669864+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.00133050000295043,
+      "timestamp": "2026-05-31T11:11:17.690569+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.006967499852180481,
+      "timestamp": "2026-05-31T11:11:17.716559+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "success",
+      "duration_seconds": 0.0005641002207994461,
+      "timestamp": "2026-05-31T11:16:08.305765+00:00",
+      "details": {
+        "sources": [
+          "features"
+        ]
+      }
+    },
+    {
+      "pipeline": "download",
+      "status": "failed",
+      "duration_seconds": 0.00034820009022951126,
+      "timestamp": "2026-05-31T11:16:08.322397+00:00",
+      "details": {
+        "error": "network"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.00626359973102808,
+      "timestamp": "2026-05-31T11:16:08.345876+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "failed",
+      "duration_seconds": 0.0014331997372210026,
+      "timestamp": "2026-05-31T11:16:08.363480+00:00",
+      "details": {
+        "error": "bad"
+      }
+    },
+    {
+      "pipeline": "build_features",
+      "status": "success",
+      "duration_seconds": 0.005692699924111366,
+      "timestamp": "2026-05-31T11:16:08.386382+00:00",
+      "details": {
+        "total_rows": 1,
+        "train_rows": 0,
+        "test_rows": 0
+      }
+    }
+  ]
+}

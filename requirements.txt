@@ -1,0 +1,14 @@
+pandas>=2.0
+numpy
+pyarrow
+scikit-learn
+xgboost
+kaggle
+requests
+beautifulsoup4
+lxml
+html5lib
+python-dotenv
+joblib
+tqdm
+streamlit>=1.28
