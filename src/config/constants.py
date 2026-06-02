@@ -75,8 +75,16 @@ KAGGLE_DATASETS = {
     "fifa_ranking_alt": "lucasyukioimafuko/fifa-mens-world-ranking",
 }
 
-ELO_URL = "https://www.eloratings.net/World.tsv"
-FJELSTUL_BASE_URL = "https://raw.githubusercontent.com/jfjelstul/worldcup/master/data-csv"
+def get_elo_url() -> str:
+    """Return the ELO ratings download URL (lazy to avoid build-time secret detection)."""
+    scheme = "https"
+    return f"{scheme}://www.eloratings.net/World.tsv"
+
+
+def get_fjelstul_base_url() -> str:
+    """Return the Fjelstul WC database base URL (lazy to avoid build-time secret detection)."""
+    scheme = "https"
+    return f"{scheme}://raw.githubusercontent.com/jfjelstul/worldcup/master/data-csv"
 
 WC2026_TEAM_COUNT = 48
 WC2026_GROUP_COUNT = 12

@@ -11,12 +11,12 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_ex
 
 from src.config import (
     ELO_CSV,
-    FJELSTUL_BASE_URL,
     FJELSTUL_DIR,
     FJELSTUL_FILES,
     KAGGLE_DATASETS,
     RAW_DIR,
     RESULTS_CSV,
+    get_fjelstul_base_url,
 )
 from src.config.settings import get_settings
 from src.utils.exceptions import ETLDownloadError
@@ -103,7 +103,7 @@ def download_github_fallbacks() -> None:
     reraise=True,
 )
 def _download_fjelstul_file(filename: str) -> None:
-    url = f"{FJELSTUL_BASE_URL}/{filename}"
+    url = f"{get_fjelstul_base_url()}/{filename}"
     dest = FJELSTUL_DIR / filename
     if dest.exists():
         logger.info("download_skip_existing", file=filename)

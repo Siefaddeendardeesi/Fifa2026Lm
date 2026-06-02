@@ -19,6 +19,8 @@ from src.config.constants import (
     WC2026_GROUP_COUNT,
     WC2026_KNOCKOUT_TEAMS,
     WC2026_TEAM_COUNT,
+    get_elo_url,
+    get_fjelstul_base_url,
 )
 from src.config.settings import Environment, Settings, get_settings, get_settings_for_env
 
@@ -42,15 +44,13 @@ FEATURES_PARQUET = _settings.features_parquet
 TRAIN_PARQUET = _settings.train_parquet
 TEST_PARQUET = _settings.test_parquet
 MODEL_PATH = _settings.model_path
-ELO_URL = "http://elofootball.com/World/World.csv"
-FJELSTUL_BASE_URL = "https://raw.githubusercontent.com/jfjelstul/worldcup/master/data-csv"
 
 __all__ = [
     "DATA_DIR",
     "ELO_CSV",
-    "ELO_URL",
+    "get_elo_url",
     "FEATURES_PARQUET",
-    "FJELSTUL_BASE_URL",
+    "get_fjelstul_base_url",
     "FJELSTUL_DIR",
     "MANAGERS_DIR",
     "MAPPING_CSV",
